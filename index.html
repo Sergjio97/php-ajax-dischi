@@ -12,11 +12,14 @@
 <body>
     <div id="app">
         <div class="container">
-            <ul>
-                <li v-for="album in albumList">
-                    
-                </li>
-            </ul>
+            <div class="box" v-for= "album in albumList">
+                <div class="card">
+                    <img :src="album.poster" :alt="album.title">
+                    <h3>{{album.title}}</h3>
+                    <p>{{album.author}}</p>
+                    <p>{{album.year}}</p>
+                </div>
+            </div>
         </div>
     </div>   
     
